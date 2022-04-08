@@ -1,0 +1,20 @@
+{
+  "name": "graphqlprj1",
+  "version": "1.0.0",
+  "description": "Fetching Sales Data",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbinashAcharya1973/GraphqlProj.git"
+  },
+  "author": "Abinash Acharya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbinashAcharya1973/GraphqlProj/issues"
+  },
+  "homepage": "https://github.com/AbinashAcharya1973/GraphqlProj#readme"
+}

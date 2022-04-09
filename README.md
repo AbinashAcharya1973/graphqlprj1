@@ -14,6 +14,7 @@
 | TDate | timestamp with timezone      |     |
 
 <h4>Data Entry</h4><br>
+SalesEntry(CustomerName: String,Amount: Float,TDate: String):Sales
 <pre>
 mutation{
   SalesEntry(CustomerName:"Asin",Amount:200,TDate:"2022-04-10"){

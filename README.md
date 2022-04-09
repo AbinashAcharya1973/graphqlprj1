@@ -59,3 +59,15 @@ weeklySales(SDate: String):[WeeklySales]
   }
 }
 </pre>
+<h4>Monthly of Sales</h4><br>
+monthlySales(SYear: String,SMonth: String):[MonthlyStatus]
+<pre>
+{
+  monthlySales(SYear:"2022",SMonth:"4"){
+    tyear
+    tmonth
+    tday
+    monthlysum
+  }
+}
+</pre>

@@ -4,6 +4,7 @@ import {buildSchema} from 'graphql';
 import cors from 'cors';
 import pgPromise from 'pg-promise';
 import { v4 as uuidv4 } from 'uuid';
+
 // add your Postgresql connection string details
 const username='postgres';
 const pwd='pass09876';
@@ -79,14 +80,16 @@ const root = {
     },
     SalesEntry: async({CustomerName,Amount,TDate})=>{
         var id=uuidv4();
-        psql.tx(t=>{
-            const q1=t.one("INSERT INTO sales VALUES ($1, $2, $3, $4) RETURNING *", [id, CustomerName, Amount, TDate]).rows[0];
+        psql.tx(t=>{            
+            const q1=t.one("INSERT INTO sales VALUES ($1, $2, $3, $4) RETURNING *", [id, CustomerName, Amount, TDate]);
             return t.batch([q1]);
         })
         .then(data=>{
             return data;
         })
-        .catch(error=>{})        
+        .catch(error=>{
+            console.log(error);
+        })        
     }
     
 };

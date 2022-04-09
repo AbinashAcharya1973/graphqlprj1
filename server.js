@@ -79,17 +79,8 @@ const root = {
         return psql.manyOrNone(sQuery);//using pgsql connection to get data
     },
     SalesEntry: async({CustomerName,Amount,TDate})=>{
-        var id=uuidv4();
-        psql.tx(t=>{            
-            const q1=t.one("INSERT INTO sales VALUES ($1, $2, $3, $4) RETURNING *", [id, CustomerName, Amount, TDate]);
-            return t.batch([q1]);
-        })
-        .then(data=>{
-            return data;
-        })
-        .catch(error=>{
-            console.log(error);
-        })        
+        var id=uuidv4();        
+        return psql.one("INSERT INTO sales VALUES ($1, $2, $3, $4) RETURNING *", [id, CustomerName, Amount, TDate]);      
     }
     
 };

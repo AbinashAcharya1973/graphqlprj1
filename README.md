@@ -24,7 +24,7 @@ mutation{
 }
 </pre>
 <h4>List of Sales</h4><br>
-SalesEntry(CustomerName: String,Amount: Float,TDate: String):Sales
+allSales:[Sales]
 <pre>
 {
   allSales{
@@ -32,6 +32,30 @@ SalesEntry(CustomerName: String,Amount: Float,TDate: String):Sales
     CustomerName
     Amount
     TDate
+  }
+}
+</pre>
+<h4>Daily of Sales</h4><br>
+dailySales(SDate: String):[SalesStatus]
+<pre>
+{
+  dailySales(SDate:"2022-04-10"){
+    tdate
+    hour
+    hoursum
+  }
+}
+</pre>
+<h4>Weekly of Sales</h4><br>
+weeklySales(SDate: String):[WeeklySales]
+<pre>
+{
+  weeklySales(SDate:"2022-04-10"){
+    tyear
+    tmonth
+    tday
+    tweek
+    daysum
   }
 }
 </pre>

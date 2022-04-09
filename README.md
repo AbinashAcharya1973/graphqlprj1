@@ -23,3 +23,15 @@ mutation{
   }
 }
 </pre>
+<h4>List of Sales</h4><br>
+SalesEntry(CustomerName: String,Amount: Float,TDate: String):Sales
+<pre>
+{
+  allSales{
+    id
+    CustomerName
+    Amount
+    TDate
+  }
+}
+</pre>

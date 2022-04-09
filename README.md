@@ -67,7 +67,7 @@ monthlySales(SYear: String,SMonth: String):[MonthlyStatus]
     tyear
     tmonth
     tday
-    monthlysum
+    daysum
   }
 }
 </pre>

@@ -46,7 +46,7 @@ type MonthlyStatus{
     tyear: String
     tmonth: String
     tday: String
-    monthlysum: Float
+    daysum: Float
 },
 type WeeklySales{
     tyear: String
@@ -71,7 +71,7 @@ const root = {
         return psql.manyOrNone(sQuery);//using pgsql connection to get data
     },
     monthlySales: async ({SYear,SMonth})=>{
-        const sQuery = "select extract(YEAR from \"TDate\")as tyear, TO_CHAR(\"TDate\",'Month')as tmonth,extract(DAY from \"TDate\")as tday,sum(\"Amount\") as monthlysum from sales where extract(YEAR from \"TDate\")="+SYear+" and extract(MONTH from \"TDate\")="+SMonth+" group by 1,2,3";
+        const sQuery = "select extract(YEAR from \"TDate\")as tyear, TO_CHAR(\"TDate\",'Month')as tmonth,extract(DAY from \"TDate\")as tday,sum(\"Amount\") as daysum from sales where extract(YEAR from \"TDate\")="+SYear+" and extract(MONTH from \"TDate\")="+SMonth+" group by 1,2,3";
         return psql.manyOrNone(sQuery);//using pgsql connection to get data
     },
     overallmonthlySales: async (parent, args, ctx)=>{

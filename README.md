@@ -6,3 +6,5 @@ id            uuid
 CustomerName  character varying  255
 Amount        double
 TDate         timestamp with timezone
+
+

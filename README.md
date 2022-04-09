@@ -12,3 +12,13 @@
 | CustomerName      | character varying      |   255 |
 | Amount | double      |     |
 | TDate | timestamp with timezone      |     |
+
+<h4>Data Entry</h4><br>
+<pre>
+mutation{
+  SalesEntry(CustomerName:"Asin",Amount:200,TDate:"2022-04-10"){
+   CustomerName
+  	id
+  }
+}
+</pre>

@@ -1,4 +1,4 @@
-# graphqlprj1
+# GraphqlPrj1 [NodeJs-GraphQl-PostgresSql]
 Database Name: TestSales <br>
 Table Name: sales <br>
 Structure of sales table:<br>

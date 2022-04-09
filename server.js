@@ -84,7 +84,6 @@ const root = {
     }
     
 };
-// Create an express server and a GraphQL endpoint
 const app = express().use('*', cors());//cors included to enable CORS requests
 app.use('/graphql', graphqlHTTP({
 schema: schema,

@@ -71,3 +71,4 @@ monthlySales(SYear: String,SMonth: String):[MonthlyStatus]
   }
 }
 </pre>
+![](https://github.com/AbinashAcharya1973/graphqlprj1/images/dailysales.png)

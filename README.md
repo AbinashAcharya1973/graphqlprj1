@@ -71,4 +71,3 @@ monthlySales(SYear: String,SMonth: String):[MonthlyStatus]
   }
 }
 </pre>
-![](images/dailysales.png)

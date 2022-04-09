@@ -4,7 +4,7 @@
 | ------------- |:-------------:|
 | TestSales      | sales |
 
-Structure of the sales table:<br>
+<h4>Structure of the sales table:</h4><br>
 
 | Column Name       | Data Type           | Size  |
 | ------------- |:-------------:| -----:|

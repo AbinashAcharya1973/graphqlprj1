@@ -1,10 +1,10 @@
 # graphqlprj1
-Database Name: TestSales
-Table Name: sales 
-Structure of sales table:
-id            uuid
-CustomerName  character varying  255
-Amount        double
-TDate         timestamp with timezone
+Database Name: TestSales <br>
+Table Name: sales <br>
+Structure of sales table:<br.>
+id            uuid<br>
+CustomerName  character varying  255<br>
+Amount        double<br>
+TDate         timestamp with timezone<br>
 
 

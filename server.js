@@ -4,7 +4,7 @@ import {buildSchema} from 'graphql';
 import cors from 'cors';
 import pgPromise from 'pg-promise';
 import { v4 as uuidv4 } from 'uuid';
-
+import schema from './schema.js'
 // add your Postgresql connection string details
 const username='postgres';
 const pwd='pass09876';
@@ -15,6 +15,7 @@ const pgp = pgPromise({}); // empty pgPromise instance
 const psql = pgp(connStr); // get connection to your PG db instance
 
 // GraphQL schema to define the operations with types of data elements involved
+/*
 const schema = buildSchema(`
 type Query {
     allSales:[Sales],
@@ -55,7 +56,7 @@ type WeeklySales{
     tday: String
     daysum: Float
 }
-`);
+`);*/
 // Resolver logic to respond to the query
 const root = {
     allSales : async (parent, args, ctx) => {

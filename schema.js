@@ -5,7 +5,7 @@ type Query {
     allSales:[Sales],
     dailySales(SDate: String):[SalesStatus],
     monthlySales(SYear: String,SMonth: String):[MonthlyStatus],
-    weeklySales(SDate: String):[WeeklySales]
+    weeklySales(SDate: String):[WeeklySales],
     overallmonthlySales:[overallMonthlyStatus]
 },
 type Mutation{
@@ -31,7 +31,7 @@ type MonthlyStatus{
     tyear: String
     tmonth: String
     tday: String
-    monthlysum: Float
+    daysum: Float
 },
 type WeeklySales{
     tyear: String

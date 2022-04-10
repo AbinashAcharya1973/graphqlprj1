@@ -1,5 +1,6 @@
 # GraphqlPrj1 [NodeJs-GraphQl-PostgreSql]
-
+## Technologies
+* ExpressJs
 | Database Name       | Table Name      |
 | ------------- |:-------------:|
 | TestSales      | sales |

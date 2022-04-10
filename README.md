@@ -46,6 +46,8 @@ dailySales(SDate: String):[SalesStatus]
   }
 }
 </pre>
+<img src="images/dailysales.png"/>
+
 <h4>Weekly of Sales</h4><br>
 weeklySales(SDate: String):[WeeklySales]
 <pre>
@@ -59,6 +61,7 @@ weeklySales(SDate: String):[WeeklySales]
   }
 }
 </pre>
+<img src="images/weeklysales.png"/>
 <h4>Monthly of Sales</h4><br>
 monthlySales(SYear: String,SMonth: String):[MonthlyStatus]
 <pre>
@@ -71,4 +74,4 @@ monthlySales(SYear: String,SMonth: String):[MonthlyStatus]
   }
 }
 </pre>
-<img src="images/dailysales.png"/>
+<img src="images/monthlysales.png"/>

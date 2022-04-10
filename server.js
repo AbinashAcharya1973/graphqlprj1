@@ -14,49 +14,7 @@ const connStr =
 const pgp = pgPromise({}); // empty pgPromise instance
 const psql = pgp(connStr); // get connection to your PG db instance
 
-// GraphQL schema to define the operations with types of data elements involved
-/*
-const schema = buildSchema(`
-type Query {
-    allSales:[Sales],
-    dailySales(SDate: String):[SalesStatus],
-    monthlySales(SYear: String,SMonth: String):[MonthlyStatus],
-    weeklySales(SDate: String):[WeeklySales],
-    overallmonthlySales:[overallMonthlyStatus]
-},
-type Mutation{
-    SalesEntry(CustomerName: String,Amount: Float,TDate: String):Sales
-},
-type Sales{
-    id: ID
-    CustomerName: String
-    Amount: Float
-    TDate: String
-},
-type SalesStatus{
-    tdate: String
-    hour: String
-    hoursum: Float
-},
-type overallMonthlyStatus{
-    tyear: String
-    tmonth: String
-    monthlysum: Float
-},
-type MonthlyStatus{
-    tyear: String
-    tmonth: String
-    tday: String
-    daysum: Float
-},
-type WeeklySales{
-    tyear: String
-    tmonth: String
-    tweek: String
-    tday: String
-    daysum: Float
-}
-`);*/
+
 // Resolver logic to respond to the query
 const root = {
     allSales : async (parent, args, ctx) => {
